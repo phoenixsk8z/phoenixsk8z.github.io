@@ -240,7 +240,6 @@ nav {
   background-image: url(../imgs/websitebackground.webp);
   background-size: cover;
   background-position: 70% 60%;
-  
   overflow: hidden;
   max-width: 100vw !important;
 }

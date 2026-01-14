@@ -1,0 +1,109 @@
+@media (max-width: 768px) {
+  /* When any cert is open, make the whole section top-tier */
+  #certificates:has(.modal-active) {
+    z-index: 100000;
+    position: relative;
+  }
+  /* Kill all desktop hover effects that cause shaking */
+  .cert-item, .cert-item:hover {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* 1. The Grid: Compact icons only */
+  .cert-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+  }
+
+  /* 2. The Item: Hide the text content */
+  .cert-item {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .cert-info {
+    display: none; /* Hide the text by default on mobile */
+  }
+
+  .cert-icon {
+    width: 25vw;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(80, 255, 80, 0.2));
+  }
+
+  /* 3. The "Modal" State: When clicked, show as a popup */
+  .cert-item.modal-active .cert-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Fullscreen Overlay Style */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.99);
+    z-index: 9999;
+    padding: 40px;
+    text-align: center;
+
+    backdrop-filter: blur(8px); /* Blurs the Hero/Main content behind the modal */
+    border: 1px solid rgba(80, 255, 80, 0.2);
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow the modal itself to scroll if the text is long */
+  }
+
+  /* Add an 'X' or instructions to close */
+  .cert-item.modal-active .cert-info::before {
+    content: "Tap anywhere to close";
+    color: #50ff50;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+
+  /* Ensure the text inside the modal looks good */
+  .cert-item.modal-active h3 {
+    font-size: 1.5rem;
+    color: #50ff50;
+    margin-bottom: 15px;
+  }
+
+  /* Ensure text doesn't overflow or shift */
+  .cert-info h3, .cert-info p, .cert-info ul {
+    max-width: 100%;
+    text-align: center;
+    list-style-position: inside; /* Keeps bullets centered */
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  .cert-item.modal-active .modal-image {
+    display: block; /* Show only when modal is active */
+    width: 180px;   /* Make it nice and big in the modal */
+    border-radius: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(80, 255, 80, 0.3));
+    animation: fadeInScale 0.3s ease-out;
+  }
+
+  /* Smooth entry animation */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

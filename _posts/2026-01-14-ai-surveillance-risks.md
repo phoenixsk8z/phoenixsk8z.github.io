@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Is-AI-Surveillance-a-Security-Risk?"
+title: "ai"
 date: 2026-01-14
-description: "AI cameras are everywhere, but are they secure? Dive into the technical vulnerabilities of Flock Safety and the slippery slope of modern surveillance."
+description: "AI cameras are everywhere"
 ---
+
 
 # The Invisible Net: Is AI Surveillance a Safety Net or a Tripwire?
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Phoenix Ocean | Security & Programming</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css"
+      integrity="sha512-xg0Ufp0+fOdY4s0iSxIRFQGrxZz0jftjMg6FhFhJ1mj4uK6RCbDWpJNdT9JoPiwTfX6aXUXwXWqfPZJ1+Zo1xA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+
+    <link rel="icon" href="../assets/imgs/phoenixoceanlogominimal.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/blogpost.css" />
+
+    <script src="../assets/javascript/navbar.js" defer></script>
+    <!-- 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="../assets/javascript/markdown.js" defer></script>-->
+</head>
+<body>
+<!-- -->
+  <!-- ================= NAV BAR ================= -->
+  <nav>
+    <div class="nav-content">
+        <div class="nav-left">
+          <span class="logo">phoenix@resume.local</span>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    
+        <ul class="nav-right">
+          <li><a href="https://phoenixocean.live">home</a></li>
+          <li><a href="https://phoenixocean.live/blog/home">blog</a></li>
+          <li><a href="https://phoenixocean.live/#skills">skills</a></li>
+          <li><a href="https://phoenixocean.live/#work-experience">work-experience</a></li>
+          <li><a href="https://phoenixocean.live/#personal-projects">projects</a></li>
+          <li><a href="https://phoenixocean.live/#certificates">certificates</a></li>
+          <li><a href="https://phoenixocean.live/#contact">contact</a></li>
+        </ul>
+    </div>
+
+    <div id="navbar-divider"></div>
+  </nav>
+
+  <main>
+    <!-- BLOG -->
+    <section id="blog">
+        <article class="blog-post markdown-body" id="post"><h1>Avoiding Government Surveillance</h1>
+        <p>In a world where every device, app, and social network silently logs your movements, your communications, and even your habits, privacy has become a luxury. Most people rely on casual measures—VPNs, Signal, or browser privacy settings—but extreme privacy is a <strong>discipline, a strategy, and a mindset</strong>.  </p>
+        <p>This guide is for anyone who wants <strong>real control over their digital life</strong>, understands the threat of pervasive surveillance, and is willing to use the tools and practices that put power back in your hands.</p>
+        <hr>
+        <h2>Rethink Surveillance</h2>
+        <h3>Surveillance today is <strong>ubiquitous</strong>. It’s not just about law enforcement; corporations, ad networks, and cloud providers are constantly collecting metadata, location data, and behavioral patterns. Examples include:</h3>
+        <ul>
+        <li>Your <strong>search history</strong> and browsing habits  </li>
+        <li>Your <strong>messaging metadata</strong> (who you talk to, when, and for how long)  </li>
+        <li>Your <strong>location history</strong> from GPS, Wi-Fi, and cell towers  </li>
+        <li>Your <strong>cloud-stored files and photos</strong></li>
+        </ul>
+        <p>The first rule of radical privacy: <strong>assume everything can be seen, stored, and correlated.</strong> Privacy isn’t about hiding; it’s about <strong>controlling what is exposed and when</strong>.</p>
+        <hr>
+        <h2>Messaging the Extreme Way: Signal, PFS, and Threat Models</h2>
+        <p>Signal is widely recommended for privacy because it uses <strong>end-to-end encryption</strong> and <strong>perfect forward secrecy (PFS)</strong>. PFS ensures that even if a key is compromised in the future, past messages remain unreadable.  </p>
+        <h3>But Signal has limitations in a high-threat model:</h3>
+        <ul>
+        <li>Requires a <strong>phone number</strong>, linking identity to SIM/billing  </li>
+        <li><strong>Centralized servers</strong> could be coerced or compromised  </li>
+        <li>Metadata, such as timestamps and who you communicate with, is still visible</li>
+        </ul>
+        <h3>Extreme privacy advocates mitigate these risks by combining Signal with:</h3>
+        <ul>
+        <li><strong>Ephemeral accounts or disposable SIMs</strong>  </li>
+        <li>Minimal metadata exposure  </li>
+        <li>Using Signal only for certain communication layers</li>
+        </ul>
+        <p><strong>Lesson:</strong> no single app is a privacy panacea. Each tool has a specific purpose in a layered privacy strategy.</p>
+        <hr>
+        <h2>GPG: Taking Encryption Seriously</h2>
+        <h3>For long-term, high-security communication, <strong>GPG (GNU Privacy Guard)</strong> is essential. Unlike centralized apps, GPG is:</h3>
+        <ul>
+        <li><strong>Trustless</strong> – no company controls your messages  </li>
+        <li><strong>End-to-end encrypted</strong> – only intended recipients can decrypt  </li>
+        <li><strong>Authenticatable</strong> – digital signatures verify identity</li>
+        </ul>
+        <h3>GPG does have caveats:</h3>
+        <ul>
+        <li>By default, <strong>no perfect forward secrecy</strong> (if a private key is compromised, old messages are readable)  </li>
+        <li>Requires more technical effort than modern messaging apps</li>
+        </ul>
+        <h3><strong>Best practices for GPG in extreme privacy:</strong></h3>
+        <ol>
+        <li>Use <strong>subkeys</strong> that rotate periodically  </li>
+        <li>Encrypt files before sending via email or decentralized networks  </li>
+        <li>Combine with <strong>anonymous email accounts or Tor hidden services</strong></li>
+        </ol>
+        <p>This gives you <strong>control over your digital communications</strong>, even if centralized services fail or are compromised.</p>
+        <hr>
+        <h2>Tor and Decentralized Communication</h2>
+        <p>If Signal and GPG protect content, <strong>Tor and decentralized networks protect metadata</strong>. Tor hides your IP address and traffic patterns, allowing:</p>
+        <ul>
+        <li><strong>Anonymous browsing</strong>  </li>
+        <li><strong>Hidden services communication</strong>  </li>
+        <li>Participation in federated networks like <strong>Matrix, XMPP, or Nostr</strong></li>
+        </ul>
+        <p>Decentralized platforms reduce reliance on a single point of control, limiting the ability of corporations or governments to observe your activities. Communities like <strong>Dread</strong> show that privacy-first platforms can exist — with anonymity as a default principle.  </p>
+        <hr>
+        <h2>The Honeypot Principle</h2>
+        <p>Even trusted privacy tools can become <strong>targets</strong>. Once a platform becomes mainstream, it attracts attention from adversaries. This is the “honeypot” principle: the more people rely on a single tool, the more it becomes <strong>observable, targetable, and compromisable</strong>.  </p>
+        <p>Decentralization, rotation, and minimal central dependencies are key to staying ahead.</p>
+        <hr>
+        <h2>Operational Security (OPSEC) Matters</h2>
+        <p>Extreme privacy isn’t just software — it’s behavior. OPSEC practices include:</p>
+        <ul>
+        <li>Minimizing metadata wherever possible  </li>
+        <li>Using disposable or anonymous accounts  </li>
+        <li>Segregating devices for sensitive communication  </li>
+        <li>Encrypting all sensitive files, messages, and backups</li>
+        </ul>
+        <p>Every interaction online leaves a trace. OPSEC ensures these traces are <strong>intentional and manageable</strong>, rather than accidental.</p>
+        <hr>
+        <h2>The Radical Privacy Philosophy</h2>
+        <p>In one sentence:  </p>
+        <blockquote>
+        <p><strong>“If you rely on trusted intermediaries, you don’t have privacy — you have permission.”</strong>  </p>
+        </blockquote>
+        <p>Radical privacy is about <strong>digital sovereignty</strong>. Tools like Signal, GPG, Tor, and decentralized networks are not conveniences — they are <strong>extensions of your autonomy</strong>.  </p>
+        <p>The era of passive surveillance is over. If you want control over your life and communications, <strong>privacy must be deliberate, technical, and radical</strong>.</p>
+        </article>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>contact</h2>
+        <p>Want to get in touch? Send me a message below.</p>
+
+        <form id="contact-form">
+            <label>
+            <span>name</span>
+            <input type="text" name="name" placeholder="ENTER YOUR NAME" required/>
+            </label>
+
+            <label>
+            <span>email</span>
+            <input type="email" name="email" placeholder="ENTER YOUR EMAIL ADDRESS" required/>
+            </label>
+
+            <label>
+            <span>message</span>
+            <textarea name="message" rows="5" placeholder="WHAT WOULD YOU LIKE ME TO KNOW?" required></textarea>
+            </label>
+
+            <button type="submit">send</button>
+        </form>
+
+        <div class="contact-socials">
+            <!-- GitHub -->
+            <a href="https://github.com/phoenix-ocean" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.11 3.29 9.45 7.86 10.98.58.11.79-.25.79-.56v-2.1c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.12-3.17 0 0 .97-.31 3.18 1.18a10.9 10.9 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.64 1.65.24 2.87.12 3.17.75.81 1.2 1.84 1.2 3.1 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56a11.52 11.52 0 0 0 7.85-10.98C23.5 5.74 18.27.5 12 .5z"/>
+                </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/phoenix-richards-784509218/" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                <path d="M4.98 3.5A2.48 2.48 0 0 0 2.5 6c0 1.38 1.1 2.5 2.48 2.5h.03A2.48 2.48 0 0 0 7.5 6 2.48 2.48 0 0 0 5 3.5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.38c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9z"/>
+                </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/bl1ss.x/" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.51 4.51 0 0 0 12 7.5zm0 7.4A2.9 2.9 0 1 1 14.9 12 2.9 2.9 0 0 1 12 14.9zM17.8 6.2a1.05 1.05 0 1 1-1.05-1.05 1.05 1.05 0 0 1 1.05 1.05z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Phoenix — built with HTML, CSS, and JavaScript</p>
+    </footer>
+
+  </main>
+</body>
+</html>

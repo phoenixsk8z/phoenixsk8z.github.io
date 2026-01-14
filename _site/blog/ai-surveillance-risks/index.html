@@ -1,8 +1,20 @@
----
-layout: default
----
-
+<!-- _layouts/default.html -->
 <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ai</title>
+  <link rel="stylesheet" href="/css/main.css"> <!-- link to your CSS -->
+</head>
+<body>
+  <header>
+    <!-- your site header/navigation -->
+    <nav>
+      <a href="/">Home</a> | <a href="/blog/">Blog</a> <!-- add links to other pages -->
+    </nav>
+  </header>
+  <main>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -54,12 +66,12 @@ layout: default
   <main>
     <!-- BLOG -->
     <section id="blog">
-        {% for post in site.posts %}
+        
         <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <small>({{ post.date | date: "%Y-%m-%d" }})</small>
+            <a href="/blog/ai-surveillance-risks/">ai</a>
+            <small>(2026-01-14)</small>
         </li>
-        {% endfor %} 
+         
         <article class="blog-post markdown-body" id="post">
             <!-- Markdown content will be dynamically loaded here -->
         </article>
@@ -118,5 +130,13 @@ layout: default
     </footer>
 
   </main>
+</body>
+</html>
+  <!-- Page content goes here -->
+  </main>
+  <footer>
+    <!-- your footer -->
+    <p>&copy; 2025 PhoenixSk8z</p>
+  </footer>
 </body>
 </html>

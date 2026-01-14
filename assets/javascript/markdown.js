@@ -7,7 +7,7 @@ function getQueryParam(name) {
 const postFile = getQueryParam('file');
 
 if (postFile) {
-  fetch(`posts/${postFile}`)
+  fetch(`../../blog/posts/${postFile}`)
     .then(response => response.text())
     .then(markdown => {
       // Convert Markdown to HTML

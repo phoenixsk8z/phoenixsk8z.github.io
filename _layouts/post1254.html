@@ -11,16 +11,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"/>
 
-    <link rel="icon" href="../assets/imgs/phoenixoceanlogominimal.png" type="image/png">
-    <link rel="stylesheet" href="../assets/css/blogpost.css" />
+    <link rel="icon" href="../../assets/imgs/phoenixoceanlogominimal.png" type="image/png">
+    <link rel="stylesheet" href="blogpost.css" />
 
     <script src="../assets/javascript/navbar.js" defer></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>-->
-    <!--<script src="../assets/javascript/markdown.js" defer></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="../assets/javascript/markdown.js" defer></script>
 </head>
 <body>
 
-  <!-- ================= hrer? ================= -->
+  <!-- ================= whatttt ================= -->
   <nav>
     <div class="nav-content">
         <div class="nav-left">
@@ -50,9 +50,14 @@
   <main>
     <!-- BLOG -->
     <section id="blog">
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <small>({{ post.date | date: "%Y-%m-%d" }})</small>
+        </li>
+        {% endfor %} 
         <article class="blog-post markdown-body" id="post">
             <!-- Markdown content will be dynamically loaded here -->
-            {{ content }}
         </article>
     </section>
 
